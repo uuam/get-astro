@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../posts/*.md");
+
+  // 從所有文章中提取唯一的標籤
+  const uniqueTags = [
+    ...new Set(
+      allPosts
+        .map((post: { frontmatter: { tags: any } }) => post.frontmatter.tags)
+        .flat(),
+    ),
+  ];
+  // 返回每個標籤對應的靜態路徑
+  return uniqueTags.map((tag: string) => {
+    // 過濾具有特定標籤的文章
+    const filteredPosts = allPosts.filter(
+      (post: { frontmatter: { tags: string | any[] } }) =>
+        post.frontmatter.tags.includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {
+      posts.map((post: { url: any; frontmatter: { title: any } }) => (
+        <BlogPost url={post.url} title={post.frontmatter.title} />
+      ))
+    }
+  </ul>
+</BaseLayout>
