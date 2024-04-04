@@ -1,6 +1,6 @@
 /* empty css                          */
-import { d as createComponent, r as renderTemplate, e as renderComponent, u as unescapeHTML } from '../astro_CriIIjsb.mjs';
-import { $ as $$MarkdownPostLayout } from './post-1_DmL7Gv4D.mjs';
+import { d as createComponent, r as renderTemplate, e as renderComponent, u as unescapeHTML } from '../astro_BRE8bGTY.mjs';
+import { $ as $$MarkdownPostLayout } from './post-1_Cl7kJoVM.mjs';
 
 const html = "<p>After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!</p>";
 

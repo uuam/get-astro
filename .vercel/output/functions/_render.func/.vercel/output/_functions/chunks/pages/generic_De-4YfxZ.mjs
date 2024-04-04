@@ -1,5 +1,5 @@
-import { r as resolveSrc, i as isRemoteImage, a as isESMImportedImage, b as isLocalService, D as DEFAULT_HASH_PROPS, c as isRemotePath, d as isRemoteAllowed } from '../astro/assets-service_DlLCxbnV.mjs';
-import { j as getDefaultExportFromCjs, A as AstroError, k as InvalidImageService, l as ExpectedImageOptions, E as ExpectedImage, F as FailedToFetchRemoteImageDimensions, c as createAstro, d as createComponent, n as ImageMissingAlt, r as renderTemplate, m as maybeRenderHead, f as addAttribute, s as spreadAttributes } from '../astro_CriIIjsb.mjs';
+import { r as resolveSrc, i as isRemoteImage, a as isESMImportedImage, b as isLocalService, D as DEFAULT_HASH_PROPS, c as isRemotePath, d as isRemoteAllowed } from '../astro/assets-service_fvYlcyrq.mjs';
+import { j as getDefaultExportFromCjs, A as AstroError, k as InvalidImageService, l as ExpectedImageOptions, E as ExpectedImage, F as FailedToFetchRemoteImageDimensions, c as createAstro, d as createComponent, n as ImageMissingAlt, r as renderTemplate, m as maybeRenderHead, f as addAttribute, s as spreadAttributes } from '../astro_BRE8bGTY.mjs';
 
 /**
  * @param typeMap [Object] Map of MIME type -> Array[extensions]
@@ -628,7 +628,6 @@ const units = {
   px: 1
 };
 const unitsReg = new RegExp(
-  // eslint-disable-next-line regexp/prefer-d
   `^([0-9.]+(?:e\\d+)?)(${Object.keys(units).join("|")})?$`
 );
 function parseLength(len) {
@@ -920,7 +919,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      '../astro/assets-service_DlLCxbnV.mjs'
+      '../astro/assets-service_fvYlcyrq.mjs'
     ).then(n => n.k).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1056,7 +1055,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
     additionalAttributes.srcset = image.srcSet.attribute;
   }
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(additionalAttributes)}${spreadAttributes(image.attributes)}>`;
-}, "/Users/uuam/Desktop/order_pos/astro-test/node_modules/.pnpm/astro@4.5.12_typescript@5.4.3/node_modules/astro/components/Image.astro", void 0);
+}, "/Users/uuam/Desktop/order_pos/astro-test/node_modules/.pnpm/astro@4.5.15_typescript@5.4.3/node_modules/astro/components/Image.astro", void 0);
 
 const $$Astro = createAstro("https://get-astro.vercel.app/");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
@@ -1103,7 +1102,7 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
     const srcsetAttribute = props.densities || !props.densities && !props.widths ? `${image.src}${image.srcSet.values.length > 0 ? ", " + image.srcSet.attribute : ""}` : image.srcSet.attribute;
     return renderTemplate`<source${addAttribute(srcsetAttribute, "srcset")}${addAttribute("image/" + image.options.format, "type")}${spreadAttributes(sourceAdditionalAttributes)}>`;
   })} <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(imgAdditionalAttributes)}${spreadAttributes(fallbackImage.attributes)}> </picture>`;
-}, "/Users/uuam/Desktop/order_pos/astro-test/node_modules/.pnpm/astro@4.5.12_typescript@5.4.3/node_modules/astro/components/Picture.astro", void 0);
+}, "/Users/uuam/Desktop/order_pos/astro-test/node_modules/.pnpm/astro@4.5.15_typescript@5.4.3/node_modules/astro/components/Picture.astro", void 0);
 
 const imageConfig = {"service":{"entrypoint":"astro/assets/services/sharp","config":{}},"domains":[],"remotePatterns":[]};
 					const getImage = async (options) => await getImage$1(options, imageConfig);

@@ -1,6 +1,6 @@
 /* empty css                          */
-import { c as createAstro, d as createComponent, r as renderTemplate, e as renderComponent, m as maybeRenderHead, f as addAttribute, h as renderSlot, u as unescapeHTML } from '../astro_CriIIjsb.mjs';
-import { $ as $$BaseLayout } from './_tag__Cgd0KWmy.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, e as renderComponent, m as maybeRenderHead, f as addAttribute, h as renderSlot, u as unescapeHTML } from '../astro_BRE8bGTY.mjs';
+import { $ as $$BaseLayout } from './_tag__TjRmE8-A.mjs';
 /* empty css                           */
 
 const $$Astro = createAstro("https://get-astro.vercel.app/");
